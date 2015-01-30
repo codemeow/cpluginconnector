@@ -27,7 +27,6 @@ DataStorage * pluginsdata;
 int           pluginsdatalen;
 
 Hash currentheader;
-int  currentdatapos;
 
 uint32_t strhash(char * line)
 {
@@ -120,11 +119,6 @@ void processline(char * line)
 
     if (isheader(line)) processheader(hash);
                    else processvalue(hash);
-}
-
-SomeoneSays * data2say(char * data)
-{
-    return (SomeoneSays *)data;
 }
 
 void showstats()
